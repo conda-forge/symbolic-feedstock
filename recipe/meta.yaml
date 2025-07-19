@@ -1,5 +1,5 @@
 {% set name = "symbolic" %}
-{% set version = "12.15.5" %}
+{% set version = "12.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/symbolic-{{ version }}.tar.gz
-    sha256: 0c4ee306165939b2769f88cd29d6e64f62fe2046f47aaddf570041b4f2bac6c0
+    sha256: 3fbd0b6a05d004254ee8bfc0c654781ae7d49fe47d0b573534e2c78671c75e58
   - url: https://raw.githubusercontent.com/getsentry/symbolic/refs/tags/{{ version }}/LICENSE
     sha256: 989aeccdc0127d426c2509116eff70f21b4552f08ebe9f468acc539cd121a692
 
@@ -19,7 +19,7 @@ build:
     - unzip rustsrc.zip
     - cd rustsrc
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -54,9 +54,9 @@ about:
   home: https://github.com/getsentry/symbolic
   dev_url: https://github.com/getsentry/symbolic
   license: MIT
-  license_file: 
-   - LICENSE
-   - rustsrc/THIRDPARTY.yml
+  license_file:
+    - LICENSE
+    - rustsrc/THIRDPARTY.yml
 
 extra:
   recipe-maintainers:
