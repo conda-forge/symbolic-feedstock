@@ -1,5 +1,5 @@
 {% set name = "symbolic" %}
-{% set version = "12.16.0" %}
+{% set version = "12.16.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/symbolic-{{ version }}.tar.gz
-    sha256: 3fbd0b6a05d004254ee8bfc0c654781ae7d49fe47d0b573534e2c78671c75e58
+    sha256: 3a1f00fc1ea051c2168b321b968d09b5f2215d27f25c1a73711780d9cd20f4d4
   - url: https://raw.githubusercontent.com/getsentry/symbolic/refs/tags/{{ version }}/LICENSE
     sha256: 989aeccdc0127d426c2509116eff70f21b4552f08ebe9f468acc539cd121a692
 
