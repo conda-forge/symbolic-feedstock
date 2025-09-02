@@ -19,7 +19,7 @@ build:
     - unzip rustsrc.zip
     - cd rustsrc
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
-  number: 0
+  number: 1
 
 requirements:
   build:
