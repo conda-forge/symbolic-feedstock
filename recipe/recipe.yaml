@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: symbolic
-  version: 12.17.2
+  version: "12.17.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/symbolic-${{ version }}.tar.gz
-    sha256: 7cd82c2c421466a2699bf513c16b5173311bf901239286ff1e103d1e690f843c
+    sha256: 34430b7a3c236ff40992822cb4b13b18eefd7f5693b34240c6db4b5af0513eb7
   - url: https://raw.githubusercontent.com/getsentry/symbolic/refs/tags/${{ version }}/LICENSE
     sha256: 989aeccdc0127d426c2509116eff70f21b4552f08ebe9f468acc539cd121a692
 
@@ -27,11 +27,10 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform
-      then: milksnake >=0.1.2
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - milksnake >=0.1.2
     - ${{ stdlib('c') }}
     - ${{ compiler('c') }}
     - ${{ compiler('rust') }}
