@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: symbolic
-  version: "13.0.0"
+  version: "13.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/symbolic-${{ version }}.tar.gz
-    sha256: c7ec74a179e9fa0ab7c648f5337d92ae0904b976325c46d1635908df0fa33e71
+    sha256: 10ad45bb58bd02efc89fb93c5d625b8959ae1b8d554df80cc86ddc17e3f48d88
   - url: https://raw.githubusercontent.com/getsentry/symbolic/refs/tags/${{ version }}/LICENSE
     sha256: 989aeccdc0127d426c2509116eff70f21b4552f08ebe9f468acc539cd121a692
 
